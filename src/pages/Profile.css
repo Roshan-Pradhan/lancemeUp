@@ -35,7 +35,13 @@ flex-direction:column;
   margin-bottom: 15px;
   padding: 5px;
 }
-
+.profileKey{
+  display: flex;
+  width: 80%;
+  color: #62b246;
+  font-weight: 500;
+  font-size: 22px;
+}
 .profileValue {
   border: none;
   background-color: transparent;

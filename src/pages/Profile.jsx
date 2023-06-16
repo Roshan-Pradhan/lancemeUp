@@ -31,7 +31,7 @@ const Profile = () => {
   const handleEdit = (field) => {
     setEditFields((prev) => ({ ...prev, [field]: true }));
   };
-  
+
   const handleChange = (e) => {
     setUserFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -94,6 +94,7 @@ const Profile = () => {
           )}
 
           <div className="profileInfo">
+              <span className="profileKey">Name</span>
             <div className="profileEdit">
               <input
                 type="text"
@@ -116,12 +117,13 @@ const Profile = () => {
                 </button>
               )}
             </div>
+            <span className="profileKey">Biography</span>
             <div className="profileEdit">
               <textarea
                 name="userBio"
                 defaultValue={userData[0].userBio}
                 className={editFields.userBio ? "showFocus" : "profileValue"}
-                cols="50"
+                cols="80"
                 rows="3"
                 disabled={editFields.userBio ? false : true}
                 onChange={handleChange}
@@ -139,6 +141,7 @@ const Profile = () => {
                 </button>
               )}
             </div>
+            <span className="profileKey">Province</span>
             <div className="profileEdit">
               {editFields.userProvince ? (
                 <select
@@ -170,6 +173,8 @@ const Profile = () => {
                 </button>
               )}
             </div>
+            <span className="profileKey">District</span>
+
             <div className="profileEdit">
               {editFields.userDistrict ? (
                 <select
@@ -205,6 +210,7 @@ const Profile = () => {
                 </button>
               )}
             </div>
+            <span className="profileKey">City/Village</span>
             <div className="profileEdit">
               <input
                 type="text"
