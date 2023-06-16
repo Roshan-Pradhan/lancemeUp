@@ -1,0 +1,17 @@
+.navbarWrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.navItems{
+    display: flex;
+    column-gap: 20px;
+}
+
+.navList{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}

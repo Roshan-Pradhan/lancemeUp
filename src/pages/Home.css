@@ -1,0 +1,110 @@
+.formwrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  margin-top: 15px;
+}
+.title {
+  color: white;
+}
+.userForm {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: min-content;
+  gap: 15px;
+}
+fieldset {
+  width: 410px;
+  border-radius: 3px;
+}
+.nameField{
+  height: fit-content;
+}
+.inputField {
+  border: none;
+  outline: none;
+  width: 380px;
+  padding: 8px;
+  background-color: #131022;
+  color: white;
+}
+legend {
+  color: #62b246;
+}
+.dynamicLocation {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.sbmitBTN {
+  width: 150px;
+  border: none;
+  background-color: #62b246;
+  color: white;
+  height: 50px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.requiredField {
+  color: red;
+  margin-right: 2px;
+}
+.uploadImg {
+  width: 200px;
+  height: 200px;
+  background-color: #59d38e;
+  border-radius: 5px;
+  padding: 2px;
+  object-fit: contain;
+}
+.photoInput {
+  display: none;
+}
+.photoField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  
+  .userForm {
+    grid-template-columns: auto ;
+    grid-template-rows: min-content;
+    justify-content: center;
+    align-items: center;
+  }
+  fieldset {
+    width: 300px;
+  }
+  .inputField {
+    width: 280px;
+  }
+  .photoField{
+    margin-top: -30px;
+  }
+  .sbmitBTN{
+    margin-top: -30px;
+
+  }
+
+}
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  .userForm {
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: min-content;
+    gap: 15px;
+  }
+  .photoField{
+    margin-top: -30px;
+  }
+  .sbmitBTN{
+    margin-top: -30px;
+
+  }
+}

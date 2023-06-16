@@ -1,0 +1,99 @@
+.profileWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.innerWrappper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.updateBtn {
+  color: white;
+}
+
+.profileInfo {
+width: 100%;
+display: flex;
+flex-direction:column;
+  align-items: center;
+}
+
+.profileEdit {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.profileValue {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+.showFocus {
+  border: 1px solid white;
+  border-radius: 2px;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+.profileBio {
+  color: rgb(201, 198, 198);
+  font-size: 16px;
+}
+.profileLoc {
+  color: rgb(201, 198, 198);
+  font-size: 18px;
+}
+
+.profileImg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.updateHandler {
+  width: 100px;
+  border: none;
+  background-color: #62b246;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.inputFieldProfile {
+  border: none;
+  outline: none;
+  padding: 8px;
+  background-color: #131022;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 700px) {
+  .profileValue {
+    font-size: 16px;
+  }
+  .showFocus {
+    font-size: 16px;
+  }
+  .updateHandler {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+}
