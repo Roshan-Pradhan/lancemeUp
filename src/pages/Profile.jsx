@@ -26,9 +26,12 @@ const Profile = () => {
     userDistrict: userData[0]?.userDistrict,
     userStreet: userData[0]?.userStreet,
   });
+
+  //to check which fiels edit button is pressed
   const handleEdit = (field) => {
     setEditFields((prev) => ({ ...prev, [field]: true }));
   };
+  
   const handleChange = (e) => {
     setUserFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };

@@ -8,9 +8,12 @@ const App = () => {
   return (
    <>
    <BrowserRouter>
-   <Navbar/>
+   {/* Navbar components for all pages */}
+   <Navbar/> 
    <Routes>
+   {/* Home page for user form */}
     <Route path='/' element={<Home/>}/>
+    {/* Profiel page for showing user form data and also for edit user info */}
     <Route path='/profiles' element={<Profile/>}/>
    </Routes>
    </BrowserRouter>

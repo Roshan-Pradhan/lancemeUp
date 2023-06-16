@@ -86,13 +86,23 @@ flex-direction:column;
 }
 
 @media screen and (max-width: 700px) {
+  .profileEdit {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 5px;
+  }
   .profileValue {
+    width: 200px;
     font-size: 16px;
   }
   .showFocus {
     font-size: 16px;
   }
   .updateHandler {
+    width: 60px;
     padding: 8px 15px;
     font-size: 16px;
   }

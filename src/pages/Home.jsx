@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Home.css";
 import { province, districts } from "../utills/Nepal";
-import { useLocation, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { saveData } from "../store/formSlice";
@@ -19,11 +19,12 @@ const Home = () => {
     userStreet: "",
   });
 
-
+  //to handle the change of name, bio and location field
   const handleChange = (e) => {
     setUserFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+// to handle the change of image
   const handleImgChange = (e) => {
     const selectedFile = e.target.files[0];
 
@@ -44,6 +45,7 @@ const Home = () => {
     }
   };
 
+  //for submission of form with validation and error handlling
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
@@ -60,8 +62,6 @@ const Home = () => {
       navigate("/profiles");
     }
   };
-
- 
 
   return (
     <>
@@ -106,10 +106,7 @@ const Home = () => {
               onChange={handleChange}
             >
               {province?.map((p, index) => (
-                <option
-                  value={ p.label}
-                  key={index}
-                >
+                <option value={p.label} key={index}>
                   {p.value}
                 </option>
               ))}
@@ -130,10 +127,7 @@ const Home = () => {
                   (dist) => dist.province_id === userFormData.userProvince
                 )
                 .map((p, index) => (
-                  <option
-                    key={index}
-                     value={ p.name}
-                  >
+                  <option key={index} value={p.name}>
                     {p.name}
                   </option>
                 ))}
